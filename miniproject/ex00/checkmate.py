@@ -7,7 +7,11 @@ def checkmate(board):
 
         grid = [list(line) for line in lines]
         rows = len(grid)
-        cols = max(len(r) for r in grid)
+        cols = rows
+        for i in range(rows):
+            if (cols != len(grid[i])):
+                print("Error")
+                return
 
         king = None
         for i in range(rows):
